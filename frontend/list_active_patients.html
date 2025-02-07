@@ -8,47 +8,99 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            display: grid; 
-            grid-template-columns: 200px 1fr; 
-            grid-template-rows: auto 1fr; 
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr;
         }
 
         aside {
             background-color: #f0f0f0;
-            padding: 20px;
-            grid-area: 1 / 1 / 3 / 2; 
+            padding: 10%;
+            grid-area: 1 / 1 / 3 / 2;
         }
 
         header {
-            width: 50%;
             background-color: #f2f2f2;
             padding: 20px;
             text-align: center;
-            grid-area: 1 / 2 / 2 / 3; 
+            grid-area: 1 / 2 / 2 / 3;
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+            align-items: center; /* Center horizontally */
+        }
+        header h1 {
+            width: 100%; /* Make the h1 take full width */
+        }
+        header div {
+            margin-top: 10px; /* Add some space between h1 and buttons */
         }
 
         main {
             padding: 20px;
-            grid-area: 2 / 2 / 3 / 3; 
+            grid-area: 2 / 2 / 3 / 3;
             display: flex;
-            width: 50%;
-            align-items: center;
-            justify-content: center;
+            justify-content: center; /* Center the table horizontally */
         }
-        aside nav ul li{
+
+        aside nav ul li {
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
-        .menuizqprinc h2{
+
+        .menuizqprinc h2 {
             font-size: 30px;
         }
 
+        .menuizqprinc nav ul li a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        .manuizqsec {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        img {
+            margin-left: 0px;
+            width: 150px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Prevent image from affecting layout */
+            margin: 0 auto; /* Center the image */
+        }
+
+        table {
+            width: 100%; /* Make table responsive */
+            border-collapse: collapse; /* Collapse borders */
+            margin-top: 20px; /* Add some space above the table */
+        }
+
+        th, td {
+            border: 1px solid #ddd; /* Add borders to cells */
+            padding: 8px;
+            text-align: left; /* Align text to the left */
+        }
+        th {
+            background-color: #f2f2f2; /* Set background color for header cells */
+        }
+
+        /* Responsive table styling */
+        .table-responsive {
+            overflow-x: auto; /* Enable horizontal scrolling if needed */
+        }
     </style>
 </head>
+
 <body>
     <aside class="menuizqprinc">
         <nav>
+            <img src="https://www.dondeestudiar.net.co/wp-content/uploads/2022/04/AF1QipNwcbn9rGE2OaqJkhhfCvtO12e4a3bEwfUB4ciRw1252-h240-k-no.png" alt="UMBLOGO">
             <h2>Menu</h2>
             <ul>
                 <li><a href="#">Pacientes</a></li>
@@ -56,7 +108,7 @@
                 <li><a href="#">Doctores</a></li>
                 <li><a href="#">Otras Enfermedades</a></li>
             </ul>
-            <ul>
+            <ul class="manuizqsec">
                 <li><a href="#">Roles y Permisos</a></li>
             </ul>
         </nav>
@@ -113,4 +165,5 @@
         </section>
     </main>
 </body>
+
 </html>
