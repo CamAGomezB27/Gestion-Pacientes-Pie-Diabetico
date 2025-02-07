@@ -1,11 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>REGISTRER</title>
+        <link rel="stylesheet" href="/PROYECTO/GestionPacientesPieDiabetico/frontend/src/registrer_patient_styles.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                display: flex;
+                flex-direction: row;
+                height: 100vh;
+            }
+            
+            .column {
+                width: 20%;
+                height: 100vh;
+                display: grid;
+                text-align: left;
+                background: #D9D9D9;
+                border-radius: 10px;
+                padding: 8px;
+            }
+
+            .opciones {
+                display: grid;
+                justify-content: left;
+            }
+
+            .logo {
+                width: 100%;
+                margin-bottom: 0;
+            }
+
+            .opciones ul {
+                margin-bottom: 0px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .opciones ul li {
+                margin-bottom: 10px;
+            }
+
+            .opciones ul a {
+                text-decoration: none;
+                color: #7c7b7b;
+            }
+
+            .opciones ul a:hover {
+                color: red;
+            }
+
+            .opciones ul:nth-child(0){
+                text-align: end;
+            }
+            
+            .container {
+                flex-grow: 1; /* Ocupa el espacio restante */
+                background: white;
+                text-align: center;
+            }
+
+        </style>
     </head>
     <body>
-        
+        <div class="column">
+            <div class="opciones">
+                <img src="https://www.dondeestudiar.net.co/wp-content/uploads/2022/04/AF1QipNwcbn9rGE2OaqJkhhfCvtO12e4a3bEwfUB4ciRw1252-h240-k-no.png" alt="UMBLOGO" class="logo">
+
+                <ul>
+                    <li>
+                        <a href="/"> Menu </a>
+                    </li>
+                    <li>
+                        <a href="/"> Pacientes </a>
+                    </li>
+                    <li>
+                        <a href="/"> Doctores </a>
+                    </li>
+                    <li>
+                        <a href="/"> Otras Enfermedades </a>
+                    </li>
+                </ul>
+    
+                <ul>
+                    <li>
+                        <a href="/">Roles y Permisos</a>
+                    </li>
+                </ul>
+    
+                <ul>
+                    <li>
+                        <a href="/" class="sign-out">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+        <h2>REGISTRAR PACIENTE</h2>
+        </div>
     </body>
 </html>
