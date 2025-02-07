@@ -63,9 +63,70 @@
             }
             
             .container {
+                display: grid;
                 flex-grow: 1; /* Ocupa el espacio restante */
                 background: white;
                 text-align: center;
+                padding: 20px; /* Agrega espacio alrededor del contenido */
+            }
+
+            .container-info {
+                text-align: justify;
+                padding: 16px;
+                margin-top: 38px;
+            }
+
+            .title {
+                margin-bottom: 24px;
+            }
+
+            .ingreso-info {
+                display: flex; /* Hace que los formularios estén en fila */
+                justify-content: space-between; /* Distribuye uniformemente el espacio */
+                gap: 50px; /* Espacio entre columnas */
+            }
+
+            .from-colum {
+                display: flex;
+                width: 45%;
+            }
+            label {
+                font-weight: bold;
+                white-space: nowrap; /* Evita saltos de línea en etiquetas */
+            }
+    
+            input[type="text"], input[type="date"] {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                border: none;
+                border-bottom: 2px solid black;
+                outline: none;
+            }
+    
+            .checkbox-group {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .button {
+                display: flex; /* Cambia a flexbox para alinear los botones en fila */
+                justify-content: center; /* Centra los botones horizontalmente */
+                gap: 200px; /* Espacio entre los botones */
+                margin-top: 170px; /* Espacio arriba de los botones */
+            }
+
+            .primary-button {
+                background: #DB1417;
+                border-radius: 32px;
+                border: none;
+                color: white;
+                width: 14%;
+                cursor: pointer;
+                font-size: medium;
+                font-weight: bold;
+                height: 50px;
             }
 
         </style>
@@ -104,7 +165,66 @@
             </div>
         </div>
         <div class="container">
-        <h2>REGISTRAR PACIENTE</h2>
+            <div class="container-info">
+                <h1 class="title">Registro de Pacientes</h1>
+
+                <div class="ingreso-info">
+
+                    <div class="form-column">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" id="nombres">
+        
+                        <label for="documento">Documento de Identidad</label>
+                        <input type="text" id="documento">
+        
+                        <label>Sexo</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="masculino">
+                            <label for="masculino">Masculino</label>
+        
+                            <input type="checkbox" id="femenino">
+                            <label for="femenino">Femenino</label>
+                        </div>
+                    </div>
+
+                    <div class="form-column">
+                        <label for="nombres">Apellidos</label>
+                        <input type="text" id="nombres">
+        
+                        <label for="fecha">Fecha de Nacimiento</label>
+                        <input type="date" id="fecha">
+        
+                        <label>Activo</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="masculino">
+                            <label for="masculino">Si</label>
+        
+                            <input type="checkbox" id="femenino">
+                            <label for="femenino">No</label>
+                        </div>
+                    </div>
+
+                    <!-- <div>
+                        <label for="Nombre">Nombres</label>
+                    </div>
+                    <div>
+                        <label for="Nombre">Apellidos</label>
+                        
+                    </div>
+                    <div>
+                        <label for="Nombre">Documento</label>
+                        
+                    </div>
+                    <div>
+                        <label for="Nombre">Fecha</label>
+                        
+                    </div> -->
+                </div>
+                <div class="button">
+                    <input type="submit" value="Guardar" class="primary-button login-button">
+                    <input type="submit" value="Cancelar" class="primary-button login-button">
+                </div>
+            </div>
         </div>
     </body>
 </html>
