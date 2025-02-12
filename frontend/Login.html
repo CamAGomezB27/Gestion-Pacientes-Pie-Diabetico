@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,66 +15,36 @@
 
         body {
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
-            background-color: #f8f8f8;
-        }
-
-        .container {
-            display: flex;
-            width: 900px;
-            height: 500px;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Sección izquierda */
-        .left {
-            width: 50%;
-            background-color: #900000;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 2rem;
-            color: white;
-            position: relative;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        .left {
+            width: 55%;
         }
 
         .left h1 {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
+            color: #b00000;
             font-weight: bold;
+            margin-top: 150px;
+            text-align: center; 
         }
 
-        .logo {
-            width: 150px;
-            margin-top: 20px;
-        }
-
-        /* Sección derecha */
         .right {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            width: 25%;
             padding: 2rem;
-            position: relative;
+            border-radius: 20px;
+            color: white;
+            margin-left: auto;
+            margin-top: 50px;
+            margin-right: 140px;
         }
 
         .right h2 {
-            font-size: 1.5rem;
             margin-bottom: 20px;
-            color: #900000;
-        }
-
-        .form-container {
-            width: 100%;
-            max-width: 300px;
         }
 
         .input-box {
@@ -85,15 +56,14 @@
             width: 100%;
             padding: 10px;
             border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
+            border: none;
             outline: none;
         }
 
         .btn {
             width: 100%;
             padding: 10px;
-            background: #900000;
+            background: #b00000;
             border: none;
             color: white;
             font-size: 16px;
@@ -102,37 +72,67 @@
         }
 
         .btn:hover {
-            background: #700000;
+            background: #900000;
         }
+
+        .spacer {
+            aspect-ratio: 900/430;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+
+        .layer {
+            background-image: url(public/fondo1.png);
+        }
+
+        .logo {
+            position: absolute;
+            bottom: 0px;
+            left: -20px;
+        }
+
+        .logo img {
+            width: 230px;
+        }
+
 
     </style>
 </head>
+
 <body>
 
-    <div class="container">
-        <!-- Sección izquierda -->
+    <div class="spacer layer">
+
         <div class="left">
             <h1>Sistema web de gestión de pacientes</h1>
-            <img src="public/umb-logo.png" alt="UMB Logo" class="logo">
         </div>
 
-        <!-- Sección derecha con formulario -->
         <div class="right">
             <h2>Iniciar Sesión</h2>
-            <div class="form-container">
-                <form>
-                    <div class="input-box">
-                        <input type="email" placeholder="Correo electrónico" required>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" placeholder="Contraseña" required>
-                    </div>
-                    <button type="submit" class="btn">Iniciar Sesión</button>
-                </form>
-            </div>
-            <div class="wave"></div>
+            <form>
+                <div class="input-box">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+        </div>
+
+
+        <div class="logo">
+            <img src="public/umb-logo.png" alt="UMB Logo">
         </div>
     </div>
 
+    
+
+    
+
 </body>
+
 </html>
